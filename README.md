@@ -1,2 +1,2 @@
 # FizzBuzz
-FizzBuzz Game
+FizzBuzz Game c program
