@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+char* check_fizzbuzz(int number){
+    if(number%5==0 && number%3==0){
+        return "fizzbuzz";
+    }
+    else if(number%3==0){
+        return "fizz";
+    }
+    else if(number%5==0){
+        return "buzz";
+    }
+    else{
+        return "none";
+    }
+}
+
+int main()
+{
+    int count=1,end,value;
+    char player[20],check[20];
+    printf("\nEnter an End Condition : ");
+    scanf("%d",&end);
+    while(count<=end){
+        value=rand()%end;
+        printf("Number : %d\n",value);
+        printf("\n Your Input : ");
+        scanf("%s",player);
+        if(strcmp(check_fizzbuzz(value),player)!=0){
+                if(strcmp(check_fizzbuzz(value),"none")!=0){
+                        printf("\nBetter Luck Next Time");
+                        break;
+                   }
+        }
+        count++;
+    }
+
+}
